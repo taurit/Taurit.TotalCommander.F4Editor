@@ -4,6 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+    <ApplicationIcon />
+    <StartupObject />
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
 
 </Project>
