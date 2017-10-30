@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taurit.TotalCommander.F4Editor", "Taurit.TotalCommander.F4Editor\Taurit.TotalCommander.F4Editor.csproj", "{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99679CFD-E636-4E1F-99BD-BB17AFFA566C}
+	EndGlobalSection
+EndGlobal
