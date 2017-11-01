@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.IO;
-using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Taurit.TotalCommander.F4Editor.Models;
 
@@ -26,20 +25,7 @@ namespace Taurit.TotalCommander.F4Editor.Services
             var editor = _programMatcher.GetEditorFor(filePath, config);
 
             // fallback scenario: open file in system default editor
-            if (editor == null)
-                OpenFileInNotepad(filePath);
-            else
-                OpenFileInEditor(editor, filePath);
-        }
-
-        private void OpenFileInNotepad(string filePath)
-        {
-            var processStartInfo = new ProcessStartInfo("notepad.exe");
-            processStartInfo.Arguments = Path.GetFileName(filePath);
-            processStartInfo.UseShellExecute = true;
-            processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
-            processStartInfo.Verb = "OPEN";
-            Process.Start(processStartInfo);
+            OpenFileInEditor(editor, filePath);
         }
 
         private void OpenFileInEditor(Editor editor, string filePath)
@@ -49,22 +35,6 @@ namespace Taurit.TotalCommander.F4Editor.Services
             processStartInfo.UseShellExecute = true;
             processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
             processStartInfo.Verb = "OPEN";
-            Process.Start(processStartInfo);
-        }
-
-        /// <summary>
-        ///     This is risky, because system doesn't have association for all filetypes (eg. .json is unlikely to have any
-        ///     association)
-        /// </summary>
-        /// <param name="filePath"></param>
-        private void OpenFileInDefaultEditor([NotNull] string filePath)
-        {
-            var processStartInfo = new ProcessStartInfo(filePath);
-            processStartInfo.Arguments = Path.GetFileName(filePath);
-            processStartInfo.UseShellExecute = true;
-            processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
-            processStartInfo.FileName = filePath;
-            processStartInfo.Verb = "EDIT";
             Process.Start(processStartInfo);
         }
     }

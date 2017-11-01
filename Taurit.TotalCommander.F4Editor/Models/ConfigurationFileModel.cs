@@ -5,6 +5,7 @@ namespace Taurit.TotalCommander.F4Editor.Models
 {
     internal class ConfigurationFileModel
     {
-        [JsonProperty] internal List<Editor> EditorConfigurations;
+        [JsonProperty] internal GenericEditor DefaultEditor;
+        [JsonProperty] internal List<SpecialPurposeEditor> EditorConfigurations;
     }
 }

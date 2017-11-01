@@ -1,12 +1,14 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using JetBrains.Annotations;
 using Taurit.TotalCommander.F4Editor.Models;
 
 namespace Taurit.TotalCommander.F4Editor.Services
 {
     internal class ProgramMatcher
     {
+        [NotNull]
         public Editor GetEditorFor(string filePath, ConfigurationFileModel config)
         {
             var fileExtensionLowercase = new FileInfo(filePath).Extension.ToLowerInvariant().TrimStart('.');
@@ -21,7 +23,7 @@ namespace Taurit.TotalCommander.F4Editor.Services
             var preferredEditor =
                 editorsThatSupportThisExtension.FirstOrDefault(editor => File.Exists(editor.EditorPath));
             
-            return preferredEditor;
+            return (Editor) preferredEditor ?? config.DefaultEditor;
         }
     }
 }

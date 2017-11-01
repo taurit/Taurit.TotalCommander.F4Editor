@@ -22,6 +22,9 @@ Code below is an example of a configuration file content.
 
 ```json
 {
+  "DefaultEditor": {
+    "EditorPath": "notepad.txt"
+  },
   "EditorConfigurations": [
     {
       "EditorPath": "c:\\Program Files (x86)\\Microsoft VS Code\\Code.exe",
