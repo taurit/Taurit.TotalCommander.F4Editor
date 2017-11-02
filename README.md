@@ -14,7 +14,7 @@ You just need to set is as default editor in Total Commander, like in the screen
 
 Then if F4 is pressed, it will launch hidden and open your editor of choice (based on a configuration file).
 
-![Screenshot of Total Commander F4 Editor](documentation/total-commander-f4-configuration.jpg)
+![Screenshot of Total Commander F4 Editor](documentation/total-commander-f4-configuration.png)
 
 # Configuration
 
