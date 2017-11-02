@@ -14,7 +14,7 @@ You just need to set is as default editor in Total Commander, like in the screen
 
 Then if F4 is pressed, it will launch hidden and open your editor of choice (based on a configuration file).
 
-![Screenshot of Tota lCOmmander F4 Editor](documentation/total-commander-f4-configuration.jpg)
+![Screenshot of Total Commander F4 Editor](documentation/total-commander-f4-configuration.jpg)
 
 # Configuration
 
@@ -38,11 +38,6 @@ Code below is an example of a configuration file content.
 }
 ```
 
-# How to install?
+# Dependencies
 
-It's such a niche need that I don't expect anyone to need it and I didn't prepare any binary packages. Therefore, currently the code can only be used if it's manually compiled by the user.
-
-If I'm wrong and you want to use such tool, drop me a message or create issue here, so I know there's need for it!
-
-By default, it requires runtime for .NET Core 2.0 or newer installed, although it can be easily compiled as a [self-contained package](https://docs.microsoft.com/en-us/dotnet/core/deploying/) containing all required dependencies for a specific platform (eg. 64-bit Windows).
-
+Currently builds depend on .NET Framework 4.5. It's installed in your OS by default since Windows 8. In case of older systems, runtime can be manually installed, although it's likely that you already have it installed by Windows Update.
