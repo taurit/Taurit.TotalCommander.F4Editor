@@ -2,9 +2,9 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace Taurit.TotalCommander.F4Editor.Models
+namespace Taurit.TotalCommander.F4Editor.Commons.Models
 {
-    internal class SpecialPurposeEditor : Editor
+    internal sealed class SpecialPurposeEditor : Editor
     {
         [JsonProperty]
         internal string ExtensionList { get; set; }
@@ -12,9 +12,8 @@ namespace Taurit.TotalCommander.F4Editor.Models
         /// <summary>
         ///     Set of lowercase extensions supported by this editor.
         /// </summary>
-        internal ISet<string> SupportedExtensions => ExtensionList
+        internal ISet<string> SupportedExtensions => new HashSet<string>(ExtensionList
             .Split(';', ',')
-            .Select(extension => extension.Trim().ToLowerInvariant())
-            .ToHashSet();
+            .Select(extension => extension.Trim().ToLowerInvariant()));
     }
 }

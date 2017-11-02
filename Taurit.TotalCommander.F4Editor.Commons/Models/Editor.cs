@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Taurit.TotalCommander.F4Editor.Models
+namespace Taurit.TotalCommander.F4Editor.Commons.Models
 {
-    internal abstract class Editor
+    public abstract class Editor
     {
         [JsonProperty]
         internal string EditorPath { get; set; }

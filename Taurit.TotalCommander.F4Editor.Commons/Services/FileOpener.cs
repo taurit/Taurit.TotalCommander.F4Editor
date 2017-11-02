@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
-using Taurit.TotalCommander.F4Editor.Models;
+using Taurit.TotalCommander.F4Editor.Commons.Models;
 
-namespace Taurit.TotalCommander.F4Editor.Services
+namespace Taurit.TotalCommander.F4Editor.Commons.Services
 {
-    internal class FileOpener
+    public class FileOpener
     {
         private readonly ProgramMatcher _programMatcher;
 
@@ -15,7 +15,7 @@ namespace Taurit.TotalCommander.F4Editor.Services
             _programMatcher = programMatcher;
         }
 
-        internal void OpenFile(string configFilePath, string filePath)
+        public void OpenFile(string configFilePath, string filePath)
         {
             // read config file
             var configFileContent = File.ReadAllText(configFilePath);
@@ -34,7 +34,6 @@ namespace Taurit.TotalCommander.F4Editor.Services
             processStartInfo.Arguments = $"\"{Path.GetFileName(filePath)}\"";
             processStartInfo.UseShellExecute = true;
             processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
-            processStartInfo.Verb = "OPEN";
             Process.Start(processStartInfo);
         }
     }

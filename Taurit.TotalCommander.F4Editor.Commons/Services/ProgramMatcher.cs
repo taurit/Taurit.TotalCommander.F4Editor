@@ -2,11 +2,11 @@
 using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
-using Taurit.TotalCommander.F4Editor.Models;
+using Taurit.TotalCommander.F4Editor.Commons.Models;
 
-namespace Taurit.TotalCommander.F4Editor.Services
+namespace Taurit.TotalCommander.F4Editor.Commons.Services
 {
-    internal class ProgramMatcher
+    public class ProgramMatcher
     {
         [NotNull]
         public Editor GetEditorFor(string filePath, ConfigurationFileModel config)
@@ -22,7 +22,7 @@ namespace Taurit.TotalCommander.F4Editor.Services
             // first editor in order is preferred. 
             var preferredEditor =
                 editorsThatSupportThisExtension.FirstOrDefault(editor => File.Exists(editor.EditorPath));
-            
+
             return (Editor) preferredEditor ?? config.DefaultEditor;
         }
     }

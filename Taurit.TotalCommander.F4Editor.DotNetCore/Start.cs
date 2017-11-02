@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
-using Taurit.TotalCommander.F4Editor.Services;
+using Taurit.TotalCommander.F4Editor.Commons.Services;
 
-namespace Taurit.TotalCommander.F4Editor
+namespace Taurit.TotalCommander.F4Editor.DotNetCore
 {
     internal static class Start
     {
