@@ -1,0 +1,11 @@
+{
+  "DefaultEditor": {
+    "EditorPath": "notepad.exe"
+  },
+  "EditorConfigurations": [
+    {
+      "EditorPath": "c:\\windows\\system32\\mspaint.exe",
+      "ExtensionList": "bmp;jpg;png"
+    }
+  ]
+}
