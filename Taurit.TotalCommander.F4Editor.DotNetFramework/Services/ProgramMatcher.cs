@@ -2,9 +2,9 @@
 using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
-using Taurit.TotalCommander.F4Editor.Commons.Models;
+using Taurit.TotalCommander.F4Editor.DotNetFramework.Models;
 
-namespace Taurit.TotalCommander.F4Editor.Commons.Services
+namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
 {
     public class ProgramMatcher
     {

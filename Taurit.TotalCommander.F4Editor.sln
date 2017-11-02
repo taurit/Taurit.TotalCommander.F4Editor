@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taurit.TotalCommander.F4Editor.DotNetCore", "Taurit.TotalCommander.F4Editor.DotNetCore\Taurit.TotalCommander.F4Editor.DotNetCore.csproj", "{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taurit.TotalCommander.F4Editor.Commons", "Taurit.TotalCommander.F4Editor.Commons\Taurit.TotalCommander.F4Editor.Commons.csproj", "{1BC1C9D8-9DAA-437D-84D1-88BFD658B0CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taurit.TotalCommander.F4Editor.DotNetFramework", "Taurit.TotalCommander.F4Editor.DotNetFramework\Taurit.TotalCommander.F4Editor.DotNetFramework.csproj", "{25CF8391-EFF0-43CB-BBE3-E3BB1A3C9035}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FA8CE2F-4BCF-4CB4-830F-60E9CB216D63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BC1C9D8-9DAA-437D-84D1-88BFD658B0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BC1C9D8-9DAA-437D-84D1-88BFD658B0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BC1C9D8-9DAA-437D-84D1-88BFD658B0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BC1C9D8-9DAA-437D-84D1-88BFD658B0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25CF8391-EFF0-43CB-BBE3-E3BB1A3C9035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25CF8391-EFF0-43CB-BBE3-E3BB1A3C9035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25CF8391-EFF0-43CB-BBE3-E3BB1A3C9035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25CF8391-EFF0-43CB-BBE3-E3BB1A3C9035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

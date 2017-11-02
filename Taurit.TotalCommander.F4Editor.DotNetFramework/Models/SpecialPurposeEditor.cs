@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
-namespace Taurit.TotalCommander.F4Editor.Commons.Models
+namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Models
 {
+    [DataContract]
     internal sealed class SpecialPurposeEditor : Editor
     {
-        [JsonProperty]
+        [DataMember]
         internal string ExtensionList { get; set; }
 
         /// <summary>
