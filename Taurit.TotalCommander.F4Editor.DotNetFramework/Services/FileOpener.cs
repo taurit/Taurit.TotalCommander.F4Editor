@@ -37,7 +37,7 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
         private void OpenFileInEditor(Editor editor, string filePath)
         {
             var processStartInfo = new ProcessStartInfo(editor.EditorPath);
-            processStartInfo.Arguments = $"\"{Path.GetFileName(filePath)}\"";
+            processStartInfo.Arguments = $"\"{filePath}\"";
             processStartInfo.UseShellExecute = true;
             processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
             Process.Start(processStartInfo);
