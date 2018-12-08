@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
@@ -11,7 +12,10 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
         [NotNull]
         public Editor GetEditorFor(string filePath, ConfigurationFileModel config)
         {
-            var fileExtensionLowercase = new FileInfo(filePath).Extension.ToLowerInvariant().TrimStart('.');
+            var fileInfo = new FileInfo(filePath);
+            var fileExtensionLowercase = String.IsNullOrEmpty(fileInfo.Extension)
+                ? fileInfo.Name.ToLowerInvariant()
+                : fileInfo.Extension.ToLowerInvariant().TrimStart('.');
             Debug.Assert(!fileExtensionLowercase.StartsWith("."), "File extension without a dot is expected");
 
             // there might be many entries for the same file type in case configuration file is shared between systems with different editors installed.
