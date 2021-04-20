@@ -22,8 +22,6 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
             // read config file
             var configFileContent = File.ReadAllText(configFilePath);
 
-            DataContractJsonSerializer s;
-
             //var config = JsonConvert.DeserializeObject<ConfigurationFileModel>(configFileContent);
             var config = Deserialize<ConfigurationFileModel>(configFileContent);
 
@@ -36,10 +34,12 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
 
         private void OpenFileInEditor(Editor editor, string filePath)
         {
-            var processStartInfo = new ProcessStartInfo(editor.EditorPath);
-            processStartInfo.Arguments = $"\"{filePath}\"";
-            processStartInfo.UseShellExecute = true;
-            processStartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
+            var processStartInfo = new ProcessStartInfo(editor.EditorPath)
+            {
+                Arguments = $"\"{filePath}\"",
+                UseShellExecute = true,
+                WorkingDirectory = Path.GetDirectoryName(filePath)
+            };
             Process.Start(processStartInfo);
         }
 
