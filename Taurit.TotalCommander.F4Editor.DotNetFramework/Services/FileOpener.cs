@@ -34,6 +34,11 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
 
         private void OpenFileInEditor(Editor editor, string filePath)
         {
+            if (!File.Exists(editor.EditorPath))
+            {
+                throw new ApplicationException($"The editor file was not found: {filePath}");
+            }
+
             var processStartInfo = new ProcessStartInfo(editor.EditorPath)
             {
                 Arguments = $"\"{filePath}\"",
