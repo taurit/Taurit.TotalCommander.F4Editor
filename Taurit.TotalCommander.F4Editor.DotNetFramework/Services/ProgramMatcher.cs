@@ -2,14 +2,12 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using JetBrains.Annotations;
 using Taurit.TotalCommander.F4Editor.DotNetFramework.Models;
 
 namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
 {
     public class ProgramMatcher
     {
-        [NotNull]
         public Editor GetEditorFor(string filePath, ConfigurationFileModel config)
         {
             var fileInfo = new FileInfo(filePath);
@@ -27,7 +25,7 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
             var preferredEditor =
                 editorsThatSupportThisExtension.FirstOrDefault(editor => File.Exists(editor.EditorPath));
 
-            return (Editor) preferredEditor ?? config.DefaultEditor;
+            return (Editor)preferredEditor ?? config.DefaultEditor;
         }
     }
 }
