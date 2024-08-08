@@ -11,7 +11,6 @@ namespace Taurit.TotalCommander.F4Editor.DotNetFramework.Services
     {
         private readonly ProgramMatcher _programMatcher;
 
-
         public FileOpener(ProgramMatcher programMatcher)
         {
             _programMatcher = programMatcher;
